@@ -1,5 +1,9 @@
 import React from 'react';
 
 export default function Footer() {
-  return <div>Yongmin Blog | All Right Reserved</div>;
+  return (
+    <p className='bg-slate-900 text-white py-2 text-sm text-center'>
+      Yongmin Blog | All Right Reserved
+    </p>
+  );
 }
