@@ -9,7 +9,7 @@ export default function PostCard({
 }: Props) {
   return (
     <Link href={`/posts/${path}`}>
-      <article className='rounded-m overflow-hidden shadow-lg'>
+      <article className='rounded-m overflow-hidden shadow-md hover:shadow-xl'>
         <Image
           className='w-full'
           src={`/images/posts/${path}.png`}
@@ -19,7 +19,7 @@ export default function PostCard({
         />
         <div className='flex flex-col items-center p-4'>
           {/* flex가 되어있어도 self-end로 혼자만 끝에 정렬 */}
-          <time className='self-end'>{date.toString()}</time>
+          <time className='self-end text-gray-700'>{date.toString()}</time>
           <h3 className='text-lg font-bold'>{title}</h3>
           {/* truncate을 사용할떄는 너비를 가득 채워줘야함 그래야 텍스트가 넘어가면 truncate됨 */}
           <p className='w-full truncate text-center'>{description}</p>

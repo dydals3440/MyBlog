@@ -24,3 +24,13 @@ export async function getAllPosts(): Promise<Post[]> {
   //   const data = await fs.readFile(filePath, 'utf-8');
   //   return JSON.parse(data);
 }
+
+export async function getFeaturedPosts() {
+  return getAllPosts() //
+    .then((posts) => posts.filter((post) => post.featured));
+}
+
+export async function getNonFeaturedPosts() {
+  return getAllPosts() //
+    .then((posts) => posts.filter((post) => !post.featured));
+}
