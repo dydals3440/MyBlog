@@ -3,9 +3,8 @@ import PostsGrid from './PostsGrid';
 import { getAllPosts } from '@/service/post';
 
 export default async function FeaturedPosts() {
-  // 1. 모든 포스트 데이터를 읽어옴
+  // 1. 모든 포스트 데이터를 읽어옴 (서버 상에서)
   const posts = await getAllPosts();
-  console.log(posts);
   // 2. 모든 포스트 데이터를 보여줌
   return (
     <section>
