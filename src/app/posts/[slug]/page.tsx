@@ -13,7 +13,7 @@ type Props = {
 export default async function PantsPage({ params: { slug } }: Props) {
   // const post = await getPostData(slug)를 구조분해할당
   const post = await getPostData(slug);
-  const { title, path } = post;
+  const { title, path, next, prev } = post;
   return (
     <article className='rounded-2xl overflow-hidden bg-gray-100 shadow-lg m-4'>
       <Image
@@ -23,8 +23,13 @@ export default async function PantsPage({ params: { slug } }: Props) {
         width={760}
         height={420}
       />
+      {/* 컴포넌트화 시킴 */}
       <PostContent post={post} />
       {/* 이전 포스트 다음 포스트 */}
+      <section>
+        {prev && <p>{prev.title}</p>}
+        {next && <p>{next.title}</p>}
+      </section>
     </article>
   );
 }
