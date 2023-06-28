@@ -1,3 +1,9 @@
+import FeaturedPosts from '../components/FeaturedPosts';
+
 export default function PostPage() {
-  return <p>포스트들!</p>;
+  return (
+    <div className='mx-auto'>
+      <FeaturedPosts />
+    </div>
+  );
 }
