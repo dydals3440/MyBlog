@@ -1,9 +1,7 @@
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import './globals.css';
-import { Open_Sans } from 'next/font/google';
-
-const sans = Open_Sans({ subsets: ['latin'] });
+import Head from 'next/head';
 
 export const metadata = {
   title: {
@@ -22,13 +20,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className={sans.className}>
+    <>
+      <Head>
+        <link
+          href='https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'
+          rel='stylesheet'
+        />
+        <title>{metadata.title.default}</title>
+        <meta name='description' content={metadata.description} />
+        <link rel='icon' href={metadata.icons.icon} />
+      </Head>
       <body className='flex flex-col w-full max-w-screen-2xl mx-auto'>
         <Navbar />
         {/* grow 자동으로 main이 가득채워짐 */}
         <main className='grow'>{children}</main>
         <Footer />
       </body>
-    </html>
+    </>
   );
 }
