@@ -1,5 +1,5 @@
 import MarkdownViewer from '@/app/components/MarkdownViewer';
-import { getPostData } from '@/service/post';
+import { getFeaturedPosts, getPostData } from '@/service/post';
 import React from 'react';
 import Image from 'next/image';
 import PostContent from '@/app/components/PostContent';
@@ -44,4 +44,11 @@ export default async function PantsPage({ params: { slug } }: Props) {
       </section>
     </article>
   );
+}
+
+export async function generateStaticParams() {
+  const posts = await getFeaturedPosts();
+  return posts.map((post) => ({
+    slug: post.path,
+  }));
 }

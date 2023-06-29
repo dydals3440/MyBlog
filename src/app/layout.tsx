@@ -12,7 +12,7 @@ export const metadata = {
   },
   description: '풀스택 개발자가 되기 위해 노력하는 사람의 블로그',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/blog/public/images/profile.ico',
   },
 };
 
