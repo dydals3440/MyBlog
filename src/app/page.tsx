@@ -4,12 +4,10 @@ import Hero from './components/Hero';
 
 export default function HomePage() {
   return (
-    <>
-      <section>
-        <Hero />
-        <FeaturedPosts />
-        <CarouselPosts />
-      </section>
-    </>
+    <section>
+      <Hero />
+      <FeaturedPosts />
+      <CarouselPosts />
+    </section>
   );
 }
