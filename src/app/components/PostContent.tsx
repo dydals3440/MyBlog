@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiTwotoneCalendar } from 'react-icons/ai';
+import { AiTwotoneCalendar } from '@react-icons/all-files/ai/AiTwotoneCalendar';
 import MarkdownViewer from './MarkdownViewer';
 import { PostData } from '@/service/post';
 

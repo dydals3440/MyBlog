@@ -1,5 +1,4 @@
 import { Post } from '@/service/post';
-import Image from 'next/image';
 import React from 'react';
 import PostCard from './PostCard';
 

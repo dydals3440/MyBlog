@@ -12,9 +12,4 @@ const nextConfig = {
   },
 };
 
-module.exports = {
-  swcMinify: true,
-  compiler: {
-    styledComponents: true,
-  },
-};
+module.exports = nextConfig;

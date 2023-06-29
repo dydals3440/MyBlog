@@ -1,4 +1,3 @@
-import React from 'react';
 import PostsGrid from './PostsGrid';
 import { getAllPosts } from '@/service/post';
 

@@ -2,7 +2,8 @@ import { Post } from '@/service/post';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { FaArrowLeft } from '@react-icons/all-files/fa/FaArrowLeft';
+import { FaArrowRight } from '@react-icons/all-files/fa/FaArrowRight';
 
 type Props = {
   post: Post;
