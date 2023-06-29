@@ -4,12 +4,23 @@ import React from 'react';
 import Image from 'next/image';
 import PostContent from '@/app/components/PostContent';
 import AdjacentPostCard from '@/app/components/AdjacentPostCard';
+import { Metadata } from 'next';
 
 type Props = {
   params: {
     slug: string;
   };
 };
+
+export async function generateMetadata({
+  params: { slug },
+}: Props): Promise<Metadata> {
+  const { title, description } = await getPostData(slug);
+  return {
+    title,
+    description,
+  };
+}
 
 export default async function PantsPage({ params: { slug } }: Props) {
   // const post = await getPostData(slug)를 구조분해할당
@@ -27,7 +38,7 @@ export default async function PantsPage({ params: { slug } }: Props) {
       {/* 컴포넌트화 시킴 */}
       <PostContent post={post} />
       {/* 이전 포스트 다음 포스트 */}
-      <section className='flex shadow-md'>
+      <section className='flex shadow-md '>
         {prev && <AdjacentPostCard post={prev} type='prev' />}
         {next && <AdjacentPostCard post={next} type='next' />}
       </section>

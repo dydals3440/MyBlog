@@ -1,6 +1,11 @@
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
-import Hero from '../components/Hero';
 import ContactForm from '../components/ContactForm';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact me',
+  description: 'Contact to Yongmin',
+};
 
 const LINKS = [
   { icon: <AiFillGithub />, url: 'https://github.com/dydals3440' },
