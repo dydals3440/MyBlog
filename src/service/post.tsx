@@ -21,7 +21,6 @@ export type PostData = Post & {
 export const getAllPosts = cache(async () => {
   // process.cwd() 프로젝트 경로를 받아와서
   // data 폴더 안에 있는 posts.json 파일을 읽어옴
-  console.log('get All posts');
   const filePath = path.join(process.cwd(), 'data', 'posts.json');
   return (
     readFile(filePath, 'utf-8')

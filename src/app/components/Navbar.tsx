@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <header className='flex justify-between p-4'>
       <Link href='/'>
-        <h1 className='text-3xl font-bold'>{"Yongmin's Blog"}</h1>
+        <h1 className='text-3xl font-bold'>YOLOG</h1>
       </Link>
       <nav className='flex gap-4 items-center'>
         <Link href='/'>home</Link>
